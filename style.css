@@ -1,0 +1,762 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: var(--Fontfamily), sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --Fontfamily: "poppins";
+  --Fontsize: 1.5rem;
+  --Fontcolor: whitesmoke;
+  --hover: aqua;
+  --creative: #3be477;
+}
+
+body {
+  /*  background: linear-gradient(45deg, black, rgb(33, 33, 33));*/ /* Use this for your purpose */
+  background-color: black;
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.head {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 34px;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: white;
+  font-size: 1.2rem;
+  font-family: var(--Fontfamily);
+  z-index: 1;
+}
+.navbar a {
+  padding: 20px;
+  justify-content: space-evenly;
+  color: var(--Fontcolor);
+  text-decoration: none;
+  font-family: var(--Fontfamily);
+  z-index: 1;
+}
+.navbar a:hover {
+  text-decoration: underline gold;
+  color: var(--hover);
+  cursor: pointer;
+}
+header h1 {
+  font-size: var(--Fontsize);
+  color: var(--Fontcolor);
+}
+header h1:hover {
+  color: var(--hover);
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  margin-top: 200px;
+}
+.myself {
+  flex-basis: 50%;
+  text-wrap: wrap;
+}
+.myimg {
+  flex-basis: 50%;
+  text-align: center;
+}
+.myself h1,
+h2,
+h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--Fontcolor);
+}
+.myself p {
+  color: var(--Fontcolor);
+}
+.name {
+  color: var(--hover);
+}
+.name:hover {
+  color: var(--creative);
+  cursor: pointer;
+}
+
+.myimg img {
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 55px gray;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.myimg img:hover {
+  box-shadow: 0 0 25px var(--hover), 0 0 50px var(--hover);
+  transform: scale(1.01);
+}
+.icons {
+  display: flex;
+  gap: 2rem;
+}
+.fa {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 40px;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+}
+.fa-github {
+  background: transparent;
+  color: var(--hover);
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--Fontcolor);
+}
+.fa-linkedin {
+  background: transparent;
+  color: var(--hover);
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--Fontcolor);
+}
+.fa-google {
+  background: transparent;
+  color: var(--hover);
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--Fontcolor);
+}
+.fa-envelope {
+  background: transparent;
+  color: var(--hover);
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--Fontcolor);
+  font-size: larger;
+}
+.fa-github:hover {
+  box-shadow: 0 0 15px var(--hover);
+  border: 2px solid var(--hover);
+  color: var(--Fontcolor);
+  transform: scale(1.2);
+}
+.fa-linkedin:hover {
+  box-shadow: 0 0 15px var(--hover);
+  border: 2px solid var(--hover);
+  color: var(--Fontcolor);
+  transform: scale(1.2);
+}
+.fa-google:hover {
+  box-shadow: 0 0 15px var(--hover);
+  border: 2px solid var(--hover);
+  color: var(--Fontcolor);
+  transform: scale(1.2);
+}
+.fa-envelope:hover {
+  box-shadow: 0 0 15px var(--hover);
+  border: 2px solid var(--hover);
+  color: var(--Fontcolor);
+  transform: scale(1.2);
+}
+.resume {
+  margin-top: 30px;
+  width: 100px;
+  padding: 5px;
+  border-radius: 2rem;
+  font-family: var(--Fontfamily);
+  font-size: 1rem;
+  border: none;
+  background-color: aqua;
+}
+.resume:hover {
+  box-shadow: 0 0 15px var(--hover);
+  color: darkblue;
+  cursor: pointer;
+}
+
+/* .............. text animation ................. */
+
+.wrap {
+  position: relative;
+}
+.wrap::before {
+  content: "FULLSTACK DEVELOPER";
+  color: var(--hover);
+  animation: words 20s infinite;
+}
+.wrap::after {
+  content: "";
+  /*background: linear-gradient(45deg, black, rgb(37, 37, 37), rgb(22, 22, 22));*/
+  background-color: black;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 2px solid var(--hover);
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+  to {
+    border-left: 2px solid var(--hover);
+  }
+}
+@keyframes words {
+  0%,
+  20% {
+    content: "FULLSTACK DEVELOPER";
+  }
+  21%,
+  40% {
+    content: "UI UX DESIGNER";
+  }
+  41%,
+  60% {
+    content: "WEB DEVELOPER";
+  }
+  61%,
+  80% {
+    content: "PYTHON DEVELOPER";
+  }
+  81%,
+  100% {
+    content: "BACKEND DEVELOPER";
+  }
+}
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+.heading {
+  font-size: 4rem;
+  text-align: center;
+  margin: 5rem 0;
+  margin-top: 150px;
+}
+
+.education {
+  padding: auto;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.education h2 {
+  margin-bottom: 5rem;
+}
+
+.timeline-items {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.timeline-items::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: var(--hover);
+  left: calc(50%);
+}
+.timeline-item {
+  margin-bottom: 30px;
+  width: 100px;
+  position: relative;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: left;
+}
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+  text-align: left;
+}
+.timeline-dot {
+  height: 21px;
+  width: 21px;
+  background-color: var(--hover);
+  box-shadow: 0 0 25px var(--hover), 0 0 50px var(--hover);
+  position: absolute;
+  left: calc(94% - 1px);
+  border-radius: 50%;
+  top: 0px;
+  transform: rotate(360deg);
+  transition: 1s;
+}
+.timeline-dot:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px var(--hover), 0 0 50px var(--hover),
+    0 0 100px var(--hover), 0 0 200px var(--hover);
+  cursor: pointer;
+}
+.timeline-date {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--Fontcolor);
+  margin: 5px 0px 15px;
+}
+.timeline-content {
+  background-color: black;
+  color: white;
+  border: 3px solid var(--hover);
+  padding: 30px 50px;
+  height: fit-content;
+  width: 500px;
+  border-radius: 3rem;
+  box-shadow: 0 0 10px, 0 0 50pxvar (--hover);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.timeline-content:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 25px var(--hover);
+}
+.timeline-content h3 {
+  font-size: 20px;
+  color: var(--hover);
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+.timeline-content p {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--hover);
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+/*........skills .......*/
+.skills {
+  margin-top: 500px;
+}
+
+.skillbox {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px 15px;
+}
+
+.skillbox1 {
+  height: 400px;
+  width: 400px;
+  background-color: black;
+  border-radius: 3rem;
+  border: 2px solid var(--hover);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  padding: 30px;
+  flex-grow: 1;
+  row-gap: 2rem;
+  /*background: linear-gradient(15deg, grey, black);
+  animation: gradient 2s ease infinite;*/
+}
+.skillbox2 {
+  height: 400px;
+  width: 400px;
+  background-color: black;
+  border-radius: 3rem;
+  border: 2px solid var(--hover);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  padding: 30px;
+  flex-grow: 1;
+  margin-top: 40px;
+  row-gap: 2rem;
+}
+.skillbox3 {
+  height: 400px;
+  width: 400px;
+  background-color: black;
+  border-radius: 3rem;
+  border: 2px solid var(--hover);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  padding: 30px;
+  flex-grow: 1;
+  margin-top: 40px;
+  row-gap: 2rem;
+}
+.skillbox4 {
+  height: 400px;
+  width: 400px;
+  background-color: black;
+  border-radius: 3rem;
+  border: 2px solid var(--hover);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  padding: 30px;
+  margin-top: 40px;
+  flex-grow: 1;
+  row-gap: 2rem;
+}
+.skillbox1 p {
+  text-align: center;
+  color: white;
+}
+.skillbox2 p {
+  text-align: center;
+  color: white;
+}
+.skillbox3 p {
+  text-align: center;
+  color: white;
+}
+.skillbox4 p {
+  text-align: center;
+  color: white;
+}
+.skillbox1:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px var(--hover), 0 0 50px var(--hover);
+  cursor: pointer;
+}
+.skillbox2:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px var(--hover), 0 0 50px var(--hover);
+  cursor: pointer;
+}
+.skillbox3:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px var(--hover), 0 0 50px var(--hover);
+  cursor: pointer;
+}
+.skillbox4:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px var(--hover), 0 0 50px var(--hover);
+  cursor: pointer;
+}
+.skillbox img {
+  border-radius: 50%;
+  border: 4px solid var(--hover);
+  box-shadow: 0 0 25px var(--hover);
+}
+.intskill {
+  color: var(--Fontcolor);
+  text-align: center;
+  font-size: 4rem;
+}
+.skillbox2 h2 {
+  color: var(--creative);
+}
+.skillbox3 h2 {
+  color: var(--creative);
+}
+.skillbox4 h2 {
+  color: var(--creative);
+}
+.skillbox1 h2 {
+  color: var(--creative);
+}
+
+/* .......projects..... */
+.project {
+  margin-top: 500px;
+}
+.inproject {
+  color: var(--Fontcolor);
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+#myproject {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  row-gap: 8rem;
+}
+
+.project1 {
+  height: 500px;
+  width: 400px;
+  border: 3px solid var(--hover);
+  text-align: center;
+  color: var(--Fontcolor);
+  padding: 10px;
+  border-radius: 1rem;
+}
+.project2 {
+  height: 500px;
+  width: 400px;
+  border: 3px solid var(--hover);
+  text-align: center;
+  color: var(--Fontcolor);
+  padding: 10px;
+  border-radius: 1rem;
+}
+.project3 {
+  height: 500px;
+  width: 400px;
+  border: 3px solid var(--hover);
+  text-align: center;
+  color: var(--Fontcolor);
+  padding: 10px;
+  border-radius: 1rem;
+}
+.project4 {
+  height: 500px;
+  width: 400px;
+  border: 3px solid var(--hover);
+  text-align: center;
+  color: var(--Fontcolor);
+  padding: 10px;
+  border-radius: 1rem;
+}
+.project5 {
+  height: 500px;
+  width: 400px;
+  border: 3px solid var(--hover);
+  text-align: center;
+  color: var(--Fontcolor);
+  padding: 10px;
+  border-radius: 1rem;
+}
+.project6 {
+  height: 500px;
+  width: 400px;
+  border: 3px solid var(--hover);
+  text-align: center;
+  color: var(--Fontcolor);
+  padding: 10px;
+  border-radius: 1rem;
+}
+#myproject h2,
+p,
+img {
+  margin-bottom: 15px;
+}
+#myproject img:hover {
+  transform: rotate(360deg);
+  transition: 1s ease-in-out;
+}
+#myproject h2 {
+  color: greenyellow;
+}
+#myproject div:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px var(--hover), 0 0 50px var(--hover);
+  cursor: pointer;
+}
+#myproject a {
+  color: var(--hover);
+}
+
+/*.......contact me..........*/
+
+.contact {
+  margin-top: 400px;
+}
+.contact_h {
+  font-size: 4rem;
+  color: var(--Fontcolor);
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.contact_h span {
+  color: var(--hover);
+}
+.contact_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+.contact1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 3rem;
+  color: var(--Fontcolor);
+  font-size: 1.5rem;
+}
+.contact1 input {
+  width: 400px;
+  height: 50px;
+  border: 3px solid var(--hover);
+  background-color: black;
+  color: var(--Fontcolor);
+  border-radius: 2rem;
+  text-align: center;
+}
+.contact2 input {
+  width: 700px;
+  height: 350px;
+  text-align: center;
+  border: 4px solid var(--hover);
+  border-radius: 3rem;
+  background-color: black;
+  color: var(--Fontcolor);
+}
+.contact1 button {
+  margin-left: 30px;
+  width: 50px;
+  border-radius: 10px;
+  background-color: var(--hover);
+  border: none;
+  cursor: pointer;
+}
+.submit {
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  border: 3px solid var(--creative);
+  background-color: black;
+  color: var(--Fontcolor);
+  font-size: var(--Fontsize);
+  font-weight: 500;
+  border-radius: 3rem;
+  margin-top: 30px;
+}
+.contact1 input:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px var(--hover), 0 0 50px var(--hover);
+}
+.contact2 input:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px var(--hover), 0 0 50px var(--hover);
+}
+.submit:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px var(--creative), 0 0 50px var(--creative);
+  cursor: pointer;
+}
+
+/*...end section.......*/
+
+.endsection {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--hover);
+  margin-top: 200px;
+  height: 400px;
+  width: 100%;
+}
+.endsection p {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.end1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.end1 a {
+  text-decoration: none;
+  color: black;
+}
+.end1 h2 {
+  color: var(--creative);
+}
+.end2 {
+  gap: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.end2 h2 {
+  color: var(--creative);
+}
+.frame iframe {
+  margin-top: 10px;
+  height: 120px;
+  width: 200px;
+  cursor: pointer;
+}
+.frame h2 {
+  color: var(--creative);
+}
